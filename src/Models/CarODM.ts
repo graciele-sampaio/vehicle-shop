@@ -16,11 +16,7 @@ class CarODM extends AbstractODM<Icar> {
       seatsQty: { type: Number, required: true },
     });
     super(schema, 'Car');
-  }
-
-  public async create(newCar: Icar): Promise<Icar> {
-    return this.model.create({ ...newCar });
-  }
+  } 
 }
 
 export default CarODM;
