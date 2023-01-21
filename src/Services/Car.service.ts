@@ -32,7 +32,6 @@ class CarService {
   public async update(id: string, car: Icar) {
     const carODM = new CarODM();
     const updated = await carODM.update(id, car);
-    console.log(updated);
     const updatedCar = this.createCarDomain(updated);
     return updatedCar;
   }
