@@ -40,11 +40,24 @@ class CarController {
   }
 
   public async findById() {
-    const { id } = this.req.params;
     try {
+      const { id } = this.req.params;
       const oneCar = await this.service.findById(id);
       if (!oneCar) return this.res.status(404).json({ message: 'Car not found' });
       return this.res.status(200).json(oneCar);
+    } catch (error: any) {
+      return this.res.status(422).json({ message: error.message });
+    }
+  }
+
+  public async update() {
+    try {
+      const { id } = this.req.params;
+      const { body } = this.req;
+      const oneCar = await this.service.findById(id);
+      if (!oneCar) return this.res.status(404).json({ message: 'Car not found' });
+      const updated = await this.service.update(id, body);
+      return this.res.status(200).json(updated);
     } catch (error: any) {
       return this.res.status(422).json({ message: error.message });
     }
