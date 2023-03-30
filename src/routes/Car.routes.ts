@@ -7,5 +7,6 @@ carRoutes.post('/', (req, res, next) => new CarController(req, res, next).create
 carRoutes.get('/', (req, res, next) => new CarController(req, res, next).findAll());
 carRoutes.get('/:id', (req, res, next) => new CarController(req, res, next).findById());
 carRoutes.put('/:id', (req, res, next) => new CarController(req, res, next).update());
+carRoutes.delete('/:id', (req, res, next) => new CarController(req, res, next).delete());
 
 export default carRoutes;

@@ -62,6 +62,18 @@ class CarController {
       return this.res.status(422).json({ message: error.message });
     }
   }
+
+  public async delete() {
+    try {
+      const { id } = this.req.params;
+      const oneCar = await this.service.findById(id);
+      if (!oneCar) return this.res.status(404).json({ message: 'This car not was found' });
+      await this.service.delete(id);
+      return this.res.status(204).json();
+    } catch (error: any) {
+      return this.res.status(422).json({ message: error.message });
+    }
+  }
 }
 
 export default CarController;

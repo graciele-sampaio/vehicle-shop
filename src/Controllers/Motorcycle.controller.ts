@@ -62,6 +62,18 @@ class MotorcycleController {
       return this.res.status(422).json({ message: error.message });
     }
   }
+
+  public async delete() {
+    try {
+      const { id } = this.req.params;
+      const oneMotorcycle = await this.service.findById(id);
+      if (!oneMotorcycle) return this.res.status(404).json({ message: 'motorcycle not found' });
+      await this.service.delete(id);
+      return this.res.status(204).end();
+    } catch (error: any) {
+      return this.res.status(422).json({ message: error.message });
+    }
+  }
 }
 
 export default MotorcycleController;
