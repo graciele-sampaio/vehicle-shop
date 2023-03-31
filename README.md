@@ -28,22 +28,22 @@ Utilizei alguns princípios de Programação Orientada a Objetos (POO) para cons
 
 Clone o repositório 
 ```bash
-   git@github.com:graciele-sampaio/vehicle-shop.git
+git@github.com:graciele-sampaio/vehicle-shop.git
 ```
 
 Entre na pasta criada:
 ```bash
-   cd vehicle-shop
+cd vehicle-shop
 ```
 
 Instale as dependências
 ```bash
-   npm install
+npm install
 ```
 
 Rodando os serviços do node e mongodb no Docker.
 ```bash
-   docker-compose up -d --build 
+docker-compose up -d --build 
 ```
 
 Para executar o terminal do node no container:
@@ -53,12 +53,12 @@ Para executar o terminal do node no container:
 
 Para executar a aplicação com o tsnode, uilize o comando dentro do terminal do containernode:
 ```bash
-   npm run dev
+npm run dev
 ```
 
 Para executar o terminal do banco de dados(mongodb) no container:
 ```bash
-  docker exec -it car_shop_db bash
+docker exec -it car_shop_db bash
 ```
 
 ## Rodando localmente 
@@ -66,24 +66,24 @@ Para executar o terminal do banco de dados(mongodb) no container:
 
 Clone o repositório 
 ```bash
-   git@github.com:graciele-sampaio/vehicle-shop.git
+git@github.com:graciele-sampaio/vehicle-shop.git
 ```
 
 Entre na pasta criada:
 ```bash
-   cd vehicle-shop
+cd vehicle-shop
 ```
 
 Instale as dependências
 ```bash
-   npm install
+npm install
 ```
 
 ## Documentação da API
 
 #### Cadastra um carro
 ```http
-   POST /cars
+POST /cars
 ```
 
 - Formato do corpo da requisição:
@@ -102,7 +102,7 @@ Instale as dependências
 
 #### Cadastra uma moto
 ```http
-   POST /motorcycles
+POST /motorcycles
 ```
 
 - Formato do corpo da requisição:
@@ -121,25 +121,25 @@ Instale as dependências
 
 #### Retorna um array com todos os carros
 ```http
-   GET /cars
+GET /cars
 ```
 
 #### Retorna um array com todas as motos
 ```http
-  GET /motorcycles
+GET /motorcycles
 ```
 ##
 
 #### Retorna um carro a partir do id passado como parâmetro
 
 ```http
-   GET /cars/:id
+GET /cars/:id
 ```
 
 #### Retorna uma moto a partir do id passado como parâmetro
 
 ```http
-   GET /motorcycles/:id
+GET /motorcycles/:id
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -150,11 +150,11 @@ Instale as dependências
 
 #### Atualiza dados do carro a partir do id passado como parâmetro
 ```http
-   PUT /cars/:id
+PUT /cars/:id
 ```
 #### Atualiza dados da moto a partir do id passado como parâmetro
 ```http
-   PUT /motorcycles/:id
+PUT /motorcycles/:id
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -165,12 +165,12 @@ Instale as dependências
 
 #### Deleta o carro a partir do id passado como parâmetro
 ```http
-   DELETE /cars/:id
+DELETE /cars/:id
 ```
 
 #### Deleta a moto a partir do id passado como parâmetro
 ```http
-   DELETE /motorcycles/:id
+DELETE /motorcycles/:id
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
