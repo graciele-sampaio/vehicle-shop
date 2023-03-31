@@ -48,7 +48,7 @@ docker-compose up -d --build
 
 Para executar o terminal do node no container:
 ```bash
-   docker exec -it car_shop bash
+docker exec -it car_shop bash
 ```
 
 Para executar a aplicação com o tsnode, uilize o comando dentro do terminal do containernode:
