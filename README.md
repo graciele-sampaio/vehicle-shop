@@ -191,4 +191,4 @@ Instale as dependências
 | PUT   | /cars/:id  | id  | string   | Atualiza os dados de um carro a partir do id passado como parâmetro  |
 | PUT   | /motorcycles/:id  | id  | string   | Atualiza os dados de uma moto a partir do id passado como parâmetro  |
 | DELETE |/cars/:id    |id   | string   | Deleta um carro a partir do id passado como parâmetro   |
-| DELETE |/motor/:id    |id   | string   | Deleta uma moto a partir do id passado como parâmetro   |
+| DELETE |/motorcycles/:id    |id   | string   | Deleta uma moto a partir do id passado como parâmetro   |
